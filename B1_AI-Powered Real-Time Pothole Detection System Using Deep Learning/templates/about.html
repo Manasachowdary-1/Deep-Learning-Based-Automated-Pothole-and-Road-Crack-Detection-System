@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - AI Powered Road Damage Detection System</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,#1e3c72,#2a5298,#6dd5ed);
+            min-height:100vh;
+            color:white;
+        }
+
+        .container{
+            width:85%;
+            margin:auto;
+            padding-top:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#ffd700;
+            font-size:42px;
+            margin-bottom:40px;
+        }
+
+        .buttons{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        button{
+            border:none;
+            padding:15px 30px;
+            font-size:18px;
+            border-radius:30px;
+            cursor:pointer;
+            margin:10px;
+            color:white;
+        }
+
+        .pothole-btn{
+            background:#ff5722;
+        }
+
+        .crack-btn{
+            background:#4caf50;
+        }
+
+        .home-btn{
+            background:#2196f3;
+        }
+
+        .box{
+            display:none;
+            background:rgba(255,255,255,0.18);
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h2{
+            color:#ffeb3b;
+        }
+
+        p{
+            font-size:20px;
+            line-height:1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI-Powered Real-Time Road Damage Detection System</h1>
+
+    <div class="buttons">
+        <button class="pothole-btn" onclick="showPothole()">
+            About Potholes
+        </button>
+
+        <button class="crack-btn" onclick="showCrack()">
+            About Cracks
+        </button>
+
+        <button class="home-btn" onclick="goHome()">
+            Return Home
+        </button>
+    </div>
+
+    <div id="potholeInfo" class="box">
+        <h2>About Potholes</h2>
+        <p>
+            Potholes are depressions or holes formed on road surfaces due to
+            water infiltration, heavy traffic, and pavement deterioration.
+            They can cause vehicle damage, increase maintenance costs, and
+            lead to serious accidents. Detecting potholes in real time helps
+            authorities repair roads quickly and improve public safety.
+        </p>
+    </div>
+
+    <div id="crackInfo" class="box">
+        <h2>About Cracks</h2>
+        <p>
+            Road cracks are fractures that develop because of aging,
+            temperature changes, and excessive traffic loads. If left
+            untreated, these cracks gradually expand and become potholes.
+            Early crack detection reduces road maintenance costs and extends
+            the lifespan of transportation infrastructure.
+        </p>
+    </div>
+
+</div>
+
+<script>
+    function showPothole() {
+        document.getElementById("potholeInfo").style.display = "block";
+        document.getElementById("crackInfo").style.display = "none";
+    }
+
+    function showCrack() {
+        document.getElementById("crackInfo").style.display = "block";
+        document.getElementById("potholeInfo").style.display = "none";
+    }
+
+    function goHome() {
+        window.location.href = "index.html";
+        /* Replace index.html with your home page file name if different */
+    }
+</script>
+
+</body>
+</html>
